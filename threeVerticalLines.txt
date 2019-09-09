@@ -1,0 +1,23 @@
+var img = new SimpleImage("rodger.png");
+
+firstLine = img.getWidth()/3;
+secondLine = firstLine + firstLine;
+thirdLine = secondLine + firstLine;
+imgHeight = img.getHeight();
+
+    for (i = 0; i < firstLine; i++) {
+        for (j = 0; j < imgHeight; j++) {
+            img.setRed(i,j,255);
+    }
+}
+    for (i = firstLine; i < secondLine; i++) {
+        for (j = 0; j < imgHeight; j++) {
+            img.setGreen(i,j,255);
+    }
+}
+    for (i = secondLine; i < img.getWidth(); i++) {
+        for (j = 0; j < imgHeight; j++) {
+            img.setBlue(i,j,255);
+    }
+}
+print(img);

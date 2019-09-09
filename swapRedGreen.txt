@@ -1,0 +1,31 @@
+// Part 2
+//this is variant where everything in image swap Red and Green
+
+var img = new SimpleImage("eastereggs.jpg");
+print(img);
+
+for (var pixel of img.values()) {
+    var temp = pixel.getRed();
+    pixel.setRed(pixel.getGreen());
+    pixel.setGreen(temp);
+}
+
+print(img);
+
+
+// Now Trying to implement as a function for one pixel
+
+function swapRedGreen(pixel) {
+  var temp = pixel.getRed();
+    pixel.setRed(pixel.getGreen());
+    pixel.setGreen(temp);
+}
+
+var img = new SimpleImage("usain.jpg");
+print(img);
+
+for (var pixel of img.values()) {
+    swapRedGreen(pixel)
+}
+
+print(img);
