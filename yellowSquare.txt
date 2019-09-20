@@ -1,0 +1,8 @@
+const yellowSquare = new SimpleImage(200,200);
+    for (i = 0; i < 200; i++) {
+        for (j = 0; j < 200; j++) {
+            yellowSquare.setRed(i,j,255);
+            yellowSquare.setGreen(i,j,255);
+    }
+}
+print(yellowSquare);
