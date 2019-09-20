@@ -1,0 +1,65 @@
+// Part 3
+// Write a function named setBlack that has one parameter pixel (representing a single pixel) and returns pixel with its red, green, and blue components // changed so that the pixel’s color is black.
+
+var img = new SimpleImage("eastereggs.jpg");
+borderSize = 10
+print(img);
+
+for (var pixel of img.values()) {
+  if ( borderSize > pixel.getX()) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+    if ( borderSize > pixel.getY()) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+    if ( ( pixel.getX()) > ( img.getWidth() - borderSize)) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+    if ( ( pixel.getY()) > ( img.getHeight() - borderSize)) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+}
+
+print(img);
+
+// Now Trying to implement as a function
+
+function addBorder(img, borderSize) {
+
+for (var pixel of img.values()) {
+  if ( borderSize > pixel.getX()) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+    if ( borderSize > pixel.getY()) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+    if ( ( pixel.getX()) > ( img.getWidth() - borderSize)) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+    if ( ( pixel.getY()) > ( img.getHeight() - borderSize)) {
+    pixel.setBlue(0);
+    pixel.setRed(0);
+    pixel.setGreen(0);
+  }
+}
+}
+var img = new SimpleImage("eastereggs.jpg");
+borderSize = 10;
+print(img);
+
+addBorder(img, borderSize)
+print(img);
